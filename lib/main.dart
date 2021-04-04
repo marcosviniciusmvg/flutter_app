@@ -1,28 +1,18 @@
+import 'package:flutter_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('my first app'),
-        centerTitle: true,
-        backgroundColor: Colors.red[600],
-      ),
-      body: Center(
-          child: Image(
-            image: AssetImage('assets/devb_laranja.png'),
-        )
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Text('+'),
-        backgroundColor: Colors.red[600],
-        onPressed: (){},
-      ),
-    )
-));
+void main() => runApp(new MyApp());
 
-class Home extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return new MaterialApp(
+      title: 'Lista de Compras',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: new HomePage(),
+    );
   }
 }
